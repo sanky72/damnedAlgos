@@ -4,4 +4,4 @@ Process :
   1. Use input array, to count each occurrence of every element.
   2. forEach index of count { count[index] = "sum of all previous positions, including itself"}.
   3. forEach index of input { output[--count[index]]};.
-  4. print the output.
+  4. print the output array.
