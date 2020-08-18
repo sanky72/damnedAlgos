@@ -1,0 +1,7 @@
+Declaration : 
+         1. Let's call our input array be "input", count array be "count", output array be "output".
+Process : 
+  1. Use input array, to count each occurrence of every element.
+  2. forEach index of count { count[index] = "sum of all previous positions, including itself"}.
+  3. forEach index of input { output[--count[index]]};.
+  4. print the output.
