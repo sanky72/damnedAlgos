@@ -1,0 +1,1 @@
+{"group":"local","interactive":false,"local":true,"memoryLimit":1024,"name":"Local: countingSort","srcPath":"c:\\Users\\admin\\Desktop\\myGits\\damnedAlgos\\sortAlgos\\countingSort.cpp","tests":[{"id":1597856551033,"input":"5\n1 3 2 4 5","output":"1 2 3 4 5\n"}],"timeLimit":3000,"url":"c:\\Users\\admin\\Desktop\\myGits\\damnedAlgos\\sortAlgos\\countingSort.cpp"}
