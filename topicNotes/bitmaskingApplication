@@ -1,0 +1,45 @@
+1. To multiply or divide an integer by two you just need shift the bits of
+the required number left or right, by 1.
+
+2. To set/turn on the j-th item (0-based indexing) of the set,
+use the bitwise OR operation S |= (1 << j).
+
+3. To check if the j-th item of the set is on,
+use the bitwise AND operation T = S & (1 << j).
+If T = 0, then the j-th item of the set is off.
+If T != 0 (to be precise, T = (1 << j)), then the j-th item of the set is on.
+
+4. To clear/turn off the j-th index of a number use 
+   S &= ~(1<<j)
+
+5. To toggle (flip the status of) the j-th item of the set,
+use the bitwise XOR operation S ∧= (1 << j).
+
+6. To get the value of the least significant bit that is on (first from the right),
+use T = (S & (-S)).
+
+7. To turn on all the bits of a set of size n, use
+  S = (1 << n) - 1
+
+8 . Some rarely used formulae
+  1. Obtain the remainder (modulo) of S when it is divided by N (N is a power of 2)
+     e.g. S = (7)10 % (4)10 = (111)2 % (100)2 = (11)2 = (3)10.
+     Ans = S & (N - 1);
+
+  2. Determine if S is a power of 2.
+     e.g. S = (7)10 = (111)2 is not a power of 2, but (8)10 = (100)2 is a power of 2.
+     Ans = if(S & (S - 1)) == 0
+
+  3. Turn off the last bit in S, e.g. S = (40)10 = (101000)2 → S = (32)10 = (100000)2.
+     Ans = S - (S & (-S));
+
+  4. Turn on the last zero in S, e.g. S = (41)10 = (101001)2 → S = (43)10 = (101011)2.
+     Ans = ( S || ( S + 1))
+
+  5. Turn off the last consecutive run of ones in S
+     e.g. S = (39)10 = (100111)2 → S = (32)10 = (100000)2.
+     Ans = ( S && ( S + 1))
+
+  6. Turn on the last consecutive run of zeroes in S
+     e.g. S = (36)10 = (100100)2 → S = (39)10 = (100111)2.
+     Ans = ( S || (S - 1))
